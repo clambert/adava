@@ -1,0 +1,12 @@
+project autogen is
+	for Languages use ("C", "Ada");
+	for Main use ("autogen");
+	for Source_Dirs use ("./src/**");
+	for Object_dir use "build";
+	for Exec_Dir use "bin";
+	
+	package Compiler is
+		for Default_Switches("Ada") use ("-largs avcall_wrapper.o");
+	end Compiler;
+	
+end autogen;

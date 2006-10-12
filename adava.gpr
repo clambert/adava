@@ -1,0 +1,6 @@
+project adava is
+	for Main use ("adava");
+	for Source_Dirs use ("./src/**");
+	for Object_dir use "build";
+	for Exec_Dir use "bin";
+end adava;
