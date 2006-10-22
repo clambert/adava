@@ -26,7 +26,17 @@ package variable_arguments.auto_generation is
 	function Get_Parameters(ID, AdaType, CType : String) return Parameters;
 	procedure Replace_Tags(Template : in out Unbounded_String; P : Parameters);
 	procedure Write_Templates(P : Parameters_Array);
+	procedure Write_Templates(
+		P                       : Parameters_Array;
+		C_Output_Location       : String;
+		Ada_Output_Location     : String;
+		Template_Location       : String);
 	procedure Write_Templates_IC(P : Parameters_Array);
+	procedure Write_Templates_IC(
+		P                       : Parameters_Array;
+		C_Output_Location       : String;
+		Ada_Output_Location     : String;
+		Template_Location       : String);
 private
 	type Parameters is record
 		ID : Unbounded_String;
