@@ -32,6 +32,8 @@ uninstall:
 clean:
 	gnat clean -Padava.gpr
 	gnat clean -Pautogen.gpr
+	rm ./src/variable_arguments/variable_arguments-for_implementors-auto_generation-interfaces_C.ads
+	rm ./src/warpper.c
 	
 doc:
 

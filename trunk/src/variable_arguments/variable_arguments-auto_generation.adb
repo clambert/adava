@@ -104,4 +104,55 @@ package body variable_arguments.auto_generation is
 			Inner_Template => "./Templates/Av_Ptr_Wrapper_Template.c",
 			File_Name      => "./C_Source/extension_wrapper.c");
 	end Write_Templates;
+	
+	procedure Write_Templates_IC(
+			--------------------------------------------------------------------
+			P                       : Parameters_Array;
+			C_Output_Location       : String;
+			Ada_Output_Location     : String;
+			Template_Location       : String) is
+			--------------------------------------------------------------------
+		Outer_Template : String := Template_Location & "va_fi_ag_ic.adb";
+	begin
+		Write_Template(
+			P => P,
+			Outer_Template => Template_Location & "va_fi_ag_ic.adb",
+			Inner_Template => Template_Location & "Av_Template.adb",
+			File_Name      => Ada_Output_Location
+						   &  "/variable_arguments-"
+						   &  "for_implementors-"
+						   &  "auto_generation-interfaces_C.ads");
+		Write_Template(
+			P => P,
+			Outer_Template => Template_Location & "Wrapper.c",
+			Inner_Template => Template_Location & "Av_Wrapper_Template.c",
+			File_Name      => C_Output_Location & "wrapper.c");
+	exception
+		when Ada.Text_IO.Name_Error =>
+			Ada.Text_IO.Put_Line(Outer_Template);
+			raise;
+	end Write_Templates_IC;	
+	----------------------------------------------------------------------------
+	procedure Write_Templates(
+			--------------------------------------------------------------------
+			P                       : Parameters_Array;
+			C_Output_Location       : String;
+			Ada_Output_Location     : String;
+			Template_Location       : String) is
+			--------------------------------------------------------------------
+	begin
+		Write_Template(
+			P => P,
+			Outer_Template => Template_Location & "va_fi_ag_ex.adb",
+			Inner_Template => Template_Location & "Av_Ptr_Template.adb",
+			File_Name      => Ada_Output_Location
+						   &  "/variable_arguments-"
+						   &  "for_implementors-"
+						   &  "auto_generation-extentions.ads");
+		Write_Template(
+			P => P,
+			Outer_Template => Template_Location & "Wrapper_Ptr.c",
+			Inner_Template => Template_Location & "Av_Ptr_Wrapper_Template.c",
+			File_Name      => C_Output_Location & "extention_wrapper.c");
+	end Write_Templates;
 end variable_arguments.auto_generation;

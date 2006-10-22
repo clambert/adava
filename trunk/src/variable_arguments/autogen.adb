@@ -20,6 +20,7 @@
 --  * Boston, MA  02110-1301, USA.
 --------------------------------------------------------------------------------
 with Variable_Arguments.Auto_Generation; use Variable_Arguments.Auto_Generation;
+with Ada.Text_IO;
 procedure AutoGen is
 	Params : Parameters_Array := (
 		Get_Parameters("uchar", "Unsigned_Char", "unsigned char"),
@@ -34,6 +35,7 @@ procedure AutoGen is
 		Get_Parameters("double", "Double", "double"),
 		Get_Parameters("longdouble", "Long_Double", "long double")
 		);
+	
 begin
-	Write_Templates_IC(Params);
+	Write_Templates_IC(Params, "../src/variable_arguments/","../src/variable_arguments/","../templates/");
 end AutoGen;
