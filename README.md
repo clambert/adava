@@ -7,11 +7,11 @@ Mission Statement:
 Features:
 
   * Simple concatination operator usage such as:
-```
+```Ada
     My_Proc(Item1, Start_Argument_List & Item2 & Item3);
 ```
   * Simple API to map to the corresponding C function:
-```
+```Ada
     package body Example is
         procedure C_My_Proc; -- import the c function
         pragma Import(C, C_My_Proc, 'c_my_proc');
@@ -42,6 +42,11 @@ Features:
 Requirements
 
   * ffcall (see ffcall's homepage in links list)
+ 
+External Links 
+  * [ffcall's man page list](http://www.haible.de/bruno/packages-ffcall.html)
+  * [ffcall's homepage](http://www.haible.de/bruno/packages-ffcall-README.html)
+  * [Producing Open Source Software](http://producingoss.com/)
 
 
 
