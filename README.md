@@ -7,13 +7,12 @@ Mission Statement:
 Features:
 
   * Simple concatination operator usage such as:
-    {{{
-My_Proc(Item1, Start_Argument_List & Item2 & Item3);
-}}}
-
+```
+    My_Proc(Item1, Start_Argument_List & Item2 & Item3);
+```
   * Simple API to map to the corresponding C function:
-    {{{
-package body Example is
+```
+    package body Example is
         procedure C_My_Proc; -- import the c function
         pragma Import(C, C_My_Proc, 'c_my_proc');
 
@@ -30,8 +29,7 @@ package body Example is
             Call(AList);           -- call the c function
         end My_Proc;
     end Example;
-}}}
-
+```
   * Concatination operators defined for all of the types in Interfaces.C
 
   * Autogeneration of Ada and C code to make concatination operators 
