@@ -1,10 +1,8 @@
-Please feel free to contact us with questions concerning this project on the mailing list (see the adava discussion group in the links list)
+## Mission Statement
 
+To provide a complete community driven open source solution for calling variable argument functions written in the C programming language from within software written in the ada programming language. This solution should be easy for ada developers to understand, use, and integrate into their existing applications through a standardized api that allows for improvments to the back end with minimal or no impact on the developer using this solution.
 
-Mission Statement:
-	To provide a complete community driven open source solution for calling variable argument functions written in the C programming language from within software written in the ada programming language. This solution should be easy for ada developers to understand, use, and integrate into their existing applications through a standardized api that allows for improvments to the back end with minimal or no impact on the developer using this solution.
-
-Features:
+## Features
 
   * Simple concatination operator usage such as:
 ```Ada
@@ -39,11 +37,11 @@ Features:
     anyone with basic knowledge of C and C macros to provide custom
     functionality for special situations
 
-Requirements
+## Requirements
 
   * ffcall (see ffcall's homepage in links list)
  
-External Links 
+## External Links 
   * [ffcall's man page list](http://www.haible.de/bruno/packages-ffcall.html)
   * [ffcall's homepage](http://www.haible.de/bruno/packages-ffcall-README.html)
   * [Producing Open Source Software](http://producingoss.com/)
